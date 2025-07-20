@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be16af9d63fe29740b9c8161f7bdf67a, type: 3}
+  m_Name: GenericVehicle
+  m_EditorClassIdentifier: 
+  mass: 1000
+  maxSpeed: 20
+  maxAcceleration: 5
+  brakeAcceleration: 10
+  turnSpeed: 0.2
+  triggerDistance: 1
+  accelerationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.3
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: -0.1252468
+      value: -0.3236486
+      inSlope: -0.15361354
+      outSlope: Infinity
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 51.93337
+      outSlope: 0.41870388
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.022522194
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.21017419
+      value: 0.589419
+      inSlope: 1.1363273
+      outSlope: 1.1363273
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.45596
+      value: 0.9923008
+      inSlope: 0.024292529
+      outSlope: 0.024292529
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.55640846
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0.052140262
+      outSlope: 0.052140262
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

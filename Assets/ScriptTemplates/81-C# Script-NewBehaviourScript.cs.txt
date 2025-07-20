@@ -1,0 +1,30 @@
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+    public class #SCRIPTNAME# : MonoBehaviour {
+        #region Public Fields
+        #NOTRIM#
+        #endregion
+        
+        
+        #region Unity Methods
+        #NOTRIM#
+        #endregion
+        
+        #region Private Methods
+        #NOTRIM#    
+        #endregion
+
+        #region DEBUG   
+        // [Header("Debug")]
+        #NOTRIM#    
+        #endregion
+
+
+#if UNITY_EDITOR
+    
+#endif
+
+    }
+#ROOTNAMESPACEEND#
+
