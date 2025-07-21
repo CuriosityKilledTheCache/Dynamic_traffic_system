@@ -25,6 +25,12 @@ namespace Simulator.SignalTiming {
         public ML_DATA Ml_data;
         //public event Action OnReset;
 
+        // CSV Logger
+        private CsvLogger episodeLogger;
+        private CsvLogger rewardLogger;
+        private int episodeCounter = 0;
+        private float episodeStartTime;
+
         private float action;
 
         private TrafficLightSetup trafficLightSetup;
@@ -46,12 +52,34 @@ namespace Simulator.SignalTiming {
             trafficLightSetup = GetComponent<TrafficLightSetup>();
             phases = trafficLightSetup.Phases;
             Ml_data.observations = new float[Ml_data.OFSET + (Ml_data.NUM_OF_LEGS * Ml_data.NUM_OF_VEHICLES_PER_LEG * Ml_data.NUM_OF_OBSERVATIONS_PER_VEHICLE)];
+
+            // INITIALIZE LOGGERS
+            episodeLogger = new CsvLogger("episode_results.csv",
+                "Episode",
+                "TotalVehicles",
+                "VehiclesWaiting",
+                "EpisodeDuration",
+                "CumulativeReward",
+                "CurrentReward",
+                "CurrentPhase",
+                "GreenLightTime");
+
+            rewardLogger = new CsvLogger("reward_progress.csv",
+                "Step",
+                "Episode",
+                "Reward",
+                "CumulativeReward");
+
+            episodeStartTime = Time.time;
         }
 
 
         public override void OnEpisodeBegin() {
             //base.OnEpisodeBegin();
             Reset();
+
+            episodeCounter++;
+            episodeStartTime = Time.time;
         }
 
 
@@ -78,9 +106,36 @@ namespace Simulator.SignalTiming {
         /// <param name="obseve"></param>
         /// <returns> (phaseindex, greenlight time)</returns>
         public (int, float) GenerateAction() {
+
+            // Log step-level reward data
+            rewardLogger.LogRow(
+                StepCount,
+                episodeCounter,
+                Ml_data.rewards,
+                GetCumulativeReward()
+            );
+
             AddReward(Ml_data.rewards);
             //Debug.Log($"Reward given: {Ml_data.rewards}");
             //Debug.Log(GetCumulativeReward());
+
+            // LOG EPISODE DATA BEFORE ENDING
+            if (trafficLightSetup != null) {
+                var intersectionData = trafficLightSetup.GetComponent<IntersectionDataCalculator>();
+                if (intersectionData != null) {
+                    episodeLogger.LogRow(
+                        episodeCounter,
+                        intersectionData.TotalNumberOfVehicles,
+                        intersectionData.TotalNumberOfVehiclesWaitingInIntersection,
+                        Time.time - episodeStartTime,
+                        GetCumulativeReward(),
+                        Ml_data.rewards,
+                        trafficLightSetup.CurrentPhaseIndex,
+                        greenLightTime
+                    );
+                }
+            }
+
             EndEpisode();
 
             //print("Decision requested");
@@ -113,7 +168,26 @@ namespace Simulator.SignalTiming {
             //    Ml_data.observations[i] = -1f;
             //}
         }
-    }
 
+        // Save data when application quits or gets destroyed
+        private void OnApplicationQuit() {
+            SaveAllData();
+        }
+
+        private void OnDestroy() {
+            SaveAllData();
+        }
+
+        private void SaveAllData() {
+            episodeLogger?.SaveToFile();
+            rewardLogger?.SaveToFile();
+        }
+
+        // ADD THIS: Manual save method you can call from inspector
+        [ContextMenu("Save CSV Data")]
+        public void ManualSave() {
+            SaveAllData();
+        }
+    }
 }
 
