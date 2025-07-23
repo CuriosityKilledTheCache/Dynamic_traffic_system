@@ -1,6 +1,7 @@
 using Simulator.Manager;
 using Simulator.Road;
 using Simulator.ScriptableObject;
+using Simulator.TrafficSignal;
 using Simulator.SignalTiming;
 using System;
 using System.Collections;
@@ -25,15 +26,16 @@ namespace Simulator.TrafficSignal {
     }
 
 
-    [RequireComponent(typeof(RoadSetup), typeof(IntersectionDataCalculator))]
+    
+    [RequireComponent(typeof(RoadSetup), typeof(IntersectionDataCalculator), typeof(StaticSignalController))]
+    [RequireComponent(typeof(TrafficSignalMlAgent))]
     public class TrafficLightSetup : MonoBehaviour {
         #region Public Fields
 
         public Action OnTickComplete = () => { };
         public Action OnPhaseChange = () => { };
 
-        public TrafficSignalAlogrithm signalTimingAlgorithmType;
-
+        private TrafficSignalAlogrithm signalTimingAlgorithmType;
 
 
         [field: SerializeField] public RoadSetup RoadSetup { get; private set; }
@@ -47,12 +49,18 @@ namespace Simulator.TrafficSignal {
         //[SerializeField] private GameSettingsSO gameSettings;
         [SerializeField] private GameObject LineRendererPrefab;
         [SerializeField] private TextMeshPro TimingUI;
+
+        [HideInInspector]
         [SerializeField] private StaticSignalTimingSO staticSignalAlgorithm;
+
+        [HideInInspector]
         [SerializeField] private DynamicSignalTimingSO dynamicSignalAlgorithm;
+
+        [HideInInspector]
         [SerializeField] private MLSignalTimingOptimizationSO mlSignalTimingAlgorithm;
+
+        [HideInInspector]
         [SerializeField] private MLPhaseOptimizationSO mlPhaseOrderAlgorithm;
-
-
 
 
 
@@ -66,13 +74,49 @@ namespace Simulator.TrafficSignal {
 
         #region Unity Methods
         private void Awake() {
+            // -> CENTRAL SETTINGS OVERRIDE
+
+            /* 1) pull global settings */
+            var mgr = SignalSettingsLocator.Provider;
+            if (mgr == null)
+            {
+                Debug.LogError("SignalSettingsManager not found!", this);
+                return;
+            }
+
+            /* 2) choose timing SOs (already done in previous steps) */
+            signalTimingAlgorithmType   = mgr.algorithmType;
+            staticSignalAlgorithm       = mgr.StaticTimingSO;
+            dynamicSignalAlgorithm      = mgr.DynamicTimingSO;
+            mlSignalTimingAlgorithm     = mgr.MlTimingSO;
+            mlPhaseOrderAlgorithm       = mgr.MlPhaseSO;
+
+            /* 3) enable / disable controllers so only ONE is active */
+            var staticCtrl = GetComponent<StaticSignalController>();
+            var mlAgent    = GetComponent<TrafficSignalMlAgent>();
+
+            switch (signalTimingAlgorithmType)
+            {
+                case TrafficSignalAlogrithm.Static:
+                    staticCtrl.enabled = true;
+                    mlAgent.enabled    = false;
+                    break;
+
+                case TrafficSignalAlogrithm.SignalOptimizationML:
+                    staticCtrl.enabled = false;
+                    mlAgent.enabled    = true;
+                    break;
+
+                case TrafficSignalAlogrithm.Dynamic:
+                case TrafficSignalAlogrithm.PhaseOptimizationML:
+                    staticCtrl.enabled = false;
+                    mlAgent.enabled    = false;
+                    break;
+            }
+
+
             RoadSetup = GetComponent<RoadSetup>();
             intersectionDataCalculator = GetComponent<IntersectionDataCalculator>();
-            staticSignalAlgorithm = UnityEngine.ScriptableObject.CreateInstance<StaticSignalTimingSO>();
-            dynamicSignalAlgorithm = UnityEngine.ScriptableObject.CreateInstance<DynamicSignalTimingSO>();
-            mlSignalTimingAlgorithm = UnityEngine.ScriptableObject.CreateInstance<MLSignalTimingOptimizationSO>();
-            mlPhaseOrderAlgorithm = UnityEngine.ScriptableObject.CreateInstance<MLPhaseOptimizationSO>();
-
 
             if (!TryGetComponent<TrafficSignalMlAgent>(out var temp)) {
                 Debug.LogError("ML Agent component not found");
@@ -80,7 +124,6 @@ namespace Simulator.TrafficSignal {
             else {
                 mLSignalAgent = temp;
             }
-
 
         }
 

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a6bb0339f8cfbe5428ee2a95beb71900
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - staticTimingSO: {fileID: 11400000, guid: 52c11b54866e9734384c36043deae009, type: 2}
+  - dynamicTimingSO: {fileID: 11400000, guid: 147afcb0ff6b43e448f0af403874376d, type: 2}
+  - mlTimingSO: {fileID: 11400000, guid: 6088f2c86b15c804ba9194dd9ccbb18b, type: 2}
+  - mlPhaseSO: {fileID: 11400000, guid: 2bdc9ef4874351946b620491c24f784b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

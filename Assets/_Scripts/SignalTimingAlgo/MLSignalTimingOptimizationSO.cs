@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Simulator.ScriptableObject {
     [CreateAssetMenu(menuName = "ScriptableObjects/MLAlgorithm/MLSignalTImingOptimization", fileName = "DefaultMLSignalTImingOptimization", order = 2)]
-    internal class MLSignalTimingOptimizationSO : UnityEngine.ScriptableObject {
+    public class MLSignalTimingOptimizationSO : UnityEngine.ScriptableObject {
 
         public int REWARD_MULTIPLYER = 500;
         int lastTotalNumberOfVehicles = 0;

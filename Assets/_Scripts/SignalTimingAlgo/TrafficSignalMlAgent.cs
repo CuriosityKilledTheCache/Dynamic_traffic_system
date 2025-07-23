@@ -1,9 +1,9 @@
 using Simulator.TrafficSignal;
+using Simulator.Manager;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
-using Simulator.Manager;
 
 namespace Simulator.SignalTiming {
     [System.Serializable]
@@ -20,7 +20,7 @@ namespace Simulator.SignalTiming {
     }
 
 
-    [RequireComponent(typeof(TrafficLightSetup))]
+    [RequireComponent(typeof(TrafficLightSetup), typeof(IntersectionDataCalculator))]
     public class TrafficSignalMlAgent : Agent {
 
         public ML_DATA Ml_data;
@@ -35,6 +35,7 @@ namespace Simulator.SignalTiming {
         private float action;
 
         private TrafficLightSetup trafficLightSetup;
+        private IntersectionDataCalculator intersectionDataCalculator;
         private float greenLightTime;
         private Phase[] phases;
 
@@ -50,7 +51,9 @@ namespace Simulator.SignalTiming {
             //base.Initialize();
             Academy.Instance.AutomaticSteppingEnabled = false;
             base.Awake();
+
             trafficLightSetup = GetComponent<TrafficLightSetup>();
+            intersectionDataCalculator = GetComponent<IntersectionDataCalculator>();
             phases = trafficLightSetup.Phases;
             Ml_data.observations = new float[Ml_data.OFSET + (Ml_data.NUM_OF_LEGS * Ml_data.NUM_OF_VEHICLES_PER_LEG * Ml_data.NUM_OF_OBSERVATIONS_PER_VEHICLE)];
 
@@ -83,7 +86,7 @@ namespace Simulator.SignalTiming {
             episodeCounter++;
             episodeStartTime = Time.time;
             GameManager.Instance.TotalFuelUsed = 0f;
-
+            greenLightTime = trafficLightSetup.Phases[trafficLightSetup.CurrentPhaseIndex].greenLightTime;
         }
 
 
@@ -117,6 +120,8 @@ namespace Simulator.SignalTiming {
                 GetCumulativeReward()
             );
 
+            var so = SignalSettingsLocator.Provider.MlTimingSO;
+            so.CalculateRewards(intersectionDataCalculator, Ml_data);
             AddReward(Ml_data.rewards);
             //Debug.Log($"Reward given: {Ml_data.rewards}");
             //Debug.Log(GetCumulativeReward());
