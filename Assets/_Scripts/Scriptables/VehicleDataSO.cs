@@ -27,6 +27,14 @@ namespace Simulator.ScriptableObject {
         /// </summary>
         [FormerlySerializedAs("acceleration")]
         public AnimationCurve accelerationCurve;
+
+        [Header("Fuel Consumption (liters/sec)")]
+        // Fuel consumed per unit acceleration (L per m/s² per second)
+        public float accelFuelRate = 0.0005f;
+        // Idle fuel consumed per second when stopped
+        public float idleFuelRate = 0.0001f;
+        // Rolling drag fuel rate: per speed (L per m/s per second)
+        public float speedFuelRate = 0.0002f;
     }
 
 }

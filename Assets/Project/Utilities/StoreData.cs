@@ -9,6 +9,7 @@ namespace Utilities {
         public int TotalWaitTime;
         public float TotalDistanceTraveled;
         public int TotalTimeTaken;
+        public float  FuelUsed;
     }
 
     public class StoreData : Singleton<MonoBehaviour> {
@@ -61,7 +62,17 @@ namespace Utilities {
 
 
         public static void WriteVehicleRuntimeData(VehicleRuntimeData data) {
-            string dataToWrite = $"{data.vehicleName},{data.TotalWaitTime},{Math.Round(data.TotalDistanceTraveled, 2)},{data.TotalTimeTaken},{Math.Round((data.TotalDistanceTraveled / data.TotalTimeTaken) * 3.6f, 2)}";
+            string avgSpeed = (data.TotalTimeTaken > 0)
+                  ? Math.Round((data.TotalDistanceTraveled / data.TotalTimeTaken) * 3.6f, 2).ToString()
+                  : "0";
+
+            string dataToWrite = $"{data.vehicleName}," +
+                                $"{data.TotalWaitTime}," +
+                                $"{Math.Round(data.TotalDistanceTraveled, 2)}," +
+                                $"{data.TotalTimeTaken}," +
+                                $"{avgSpeed}," +
+                                $"{Math.Round(data.FuelUsed, 4)}";
+
             WriteString(dataToWrite, "vehicle");
         }
 

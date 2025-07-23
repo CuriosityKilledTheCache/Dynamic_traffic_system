@@ -39,6 +39,8 @@ namespace Simulator.Vehicle {
         [SerializeField] private float targetSpeed;
         private float acceleration;
         Vector3 forward;
+        private float currentFuelUsed = 0f;
+
 
         public bool Initialized { get; private set; } = false;
 
@@ -56,6 +58,7 @@ namespace Simulator.Vehicle {
             //vehicleDriverAI.Initialize();
             //pointsToFollow = vehicleDriverAI.PointsToFollow;
             Initialized = true;
+            currentFuelUsed = 0f;
         }
 
         public void DeInitialize() {
@@ -97,6 +100,15 @@ namespace Simulator.Vehicle {
             //transform.forward
             CalculateSpeed();
             //Debug.Log(speed);
+
+            // compute fuel for this timestep Δt
+            float deltaT = Time.fixedDeltaTime;
+            float accelComponent = Mathf.Abs(acceleration) * vehicleData.accelFuelRate;
+            float idleComponent = (Mathf.Approximately(Speed, 0f) ? vehicleData.idleFuelRate : 0f);
+            float speedComponent = Speed * vehicleData.speedFuelRate;
+            float fuelThisFrame = (accelComponent + idleComponent + speedComponent) * deltaT;
+            currentFuelUsed += fuelThisFrame;
+
             forward = transform.InverseTransformDirection(InputVector);
             transform.Translate(Speed * Time.fixedDeltaTime * forward);
         }
@@ -135,6 +147,8 @@ namespace Simulator.Vehicle {
             acceleration = vehicleData.maxAcceleration * vehicleData.accelerationCurve.Evaluate(CoreUtils.InverseLerpUnclamped(0, vehicleData.maxSpeed, Speed));
             Speed += acceleration * Time.fixedDeltaTime;
         }
+
+        public float FuelUsed => currentFuelUsed;
 
 
         #region  Debug

@@ -153,7 +153,12 @@ namespace Simulator.TrafficSignal {
             while (true) {
                 switch (signalTimingAlgorithmType) {
                     case TrafficSignalAlogrithm.Static:
-                        (tempNextPhaseIndex, tempNextPhaseGreenLightTime) = (-1, -1);
+                        if (staticSignalAlgorithm != null) {
+                            (tempNextPhaseIndex, tempNextPhaseGreenLightTime) = staticSignalAlgorithm.GetNextPhase(intersectionDataCalculator, CurrentPhaseIndex);
+                        } else {
+                            // Fallback: use default phase timings
+                            (tempNextPhaseIndex, tempNextPhaseGreenLightTime) = (-1, -1);
+                        }
                         break;
                     case TrafficSignalAlogrithm.Dynamic:
                         (tempNextPhaseIndex, tempNextPhaseGreenLightTime) = (-1, -1);

@@ -18,6 +18,7 @@ namespace Simulator.RuntimeData {
         public int TotalWaitTime { get; private set; }
         public float TotalDistanceTraveled { get; private set; }
         public int TotalTimeTaken { get; private set; }
+        public float FuelUsed { get; private set; }
 
         //public int WaitTimeBeforeReachingIntersesction { get; private set; }
         //public bool ReachedAnIntersection {
@@ -35,7 +36,10 @@ namespace Simulator.RuntimeData {
         private Coroutine tickCoroutine;
 
         private VehicleSettingsSO vehicleSettings;
-        private void Awake() {
+        
+
+        private void Awake()
+        {
             vehicleController = GetComponent<VehicleController>();
             vehicleDriverAI = GetComponent<VehicleDriverAI>();
             vehicleSettings = vehicleDriverAI.VehicleSettings;
@@ -83,6 +87,7 @@ namespace Simulator.RuntimeData {
             TotalWaitTime = 0;
             TotalTimeTaken = 0;
             TotalDistanceTraveled = 0;
+            FuelUsed = 0f;
 
             //ReachedAnIntersection = false;
             tickCoroutine = StartCoroutine(Tick());
@@ -92,12 +97,13 @@ namespace Simulator.RuntimeData {
         private void DeInitialize() {
             StopCoroutine(tickCoroutine);
             Initialized = false;
+            FuelUsed = GetComponent<VehicleController>().FuelUsed;
             StoreData.WriteVehicleRuntimeData(new VehicleRuntimeData {
                 vehicleName = transform.name,
                 TotalDistanceTraveled = TotalDistanceTraveled,
                 TotalTimeTaken = TotalTimeTaken,
-                TotalWaitTime = TotalWaitTime
-
+                TotalWaitTime = TotalWaitTime,
+                FuelUsed = FuelUsed 
             });
         }
 

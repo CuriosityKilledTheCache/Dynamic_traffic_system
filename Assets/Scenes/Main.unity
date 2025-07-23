@@ -325,6 +325,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -344,6 +360,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 116349022}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -355,6 +375,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 116349019}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &116349021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 116349019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &116349022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116349021}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &140012502
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +682,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -661,6 +717,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 280937099}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -672,6 +732,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 280937096}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &280937098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 280937096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &280937099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280937098}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &286320666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,6 +825,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -764,11 +860,35 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 286320668}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 77424da591e5c5646a6a1101e6c1b8c1, type: 3}
+--- !u!1 &286320667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 286320666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &286320668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286320667}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &352559137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1209,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -1108,6 +1244,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 491542017}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -1119,6 +1259,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 491542014}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &491542016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 491542014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &491542017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491542016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &499884107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1448,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -1307,6 +1483,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 552585964}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -1318,6 +1498,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 552585961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &552585963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 552585961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &552585964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552585963}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!114 &606841957 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 116942308270896224, guid: 77424da591e5c5646a6a1101e6c1b8c1,
@@ -1573,6 +1773,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -1592,6 +1808,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 637388017}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -1603,6 +1823,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 637388014}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &637388016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 637388014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &637388017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637388016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &662643889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1676,6 +1916,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -1695,6 +1951,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 662643892}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -1706,6 +1966,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 662643889}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &662643891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 662643889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &662643892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662643891}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &840261852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,6 +2529,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -2268,6 +2564,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1042783647}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -2279,6 +2579,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1042783644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1042783646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1042783644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1042783647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042783646}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1113394053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2779,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -2478,6 +2814,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1234360093}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -2489,6 +2829,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1234360090}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1234360092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1234360090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1234360093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234360092}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1238231811
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2953,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -2612,6 +2988,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1238923769}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -2623,6 +3003,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1238923766}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1238923768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1238923766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1238923769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238923768}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &1328256189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2696,6 +3096,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -2715,6 +3131,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1328256192}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -2726,6 +3146,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1328256189}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1328256191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1328256189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1328256192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328256191}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1371684675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,6 +3553,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -3132,6 +3588,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1621322824}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -3143,6 +3603,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1621322821}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1621322823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621322821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621322824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621322823}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &1640249806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3206,11 +3686,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1640249808}
   m_SourcePrefab: {fileID: 100100000, guid: 77424da591e5c5646a6a1101e6c1b8c1, type: 3}
+--- !u!1 &1640249807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1640249806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1640249808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640249807}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1686143972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3909,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -3408,6 +3944,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1720861533}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -3419,6 +3959,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1720861530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1720861532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1720861530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1720861533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720861532}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!114 &1812339764 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7294806807310503732, guid: 77424da591e5c5646a6a1101e6c1b8c1,
@@ -3641,6 +4201,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -3660,6 +4236,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1927737363}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -3671,6 +4251,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1927737360}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1927737362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1927737360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1927737363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927737362}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1985573341
 GameObject:
   m_ObjectHideFlags: 0
@@ -3987,6 +4587,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -4006,6 +4622,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2045976288}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -4017,6 +4637,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2045976285}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2045976287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045976285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045976288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045976287}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &2067445506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4090,6 +4730,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4341587461953201672, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: staticSignalAlgorithm
+      value: 
+      objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
+        type: 2}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: signalTimingAlgorithmType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -4109,6 +4765,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067445509}
     - targetCorrespondingSourceObject: {fileID: 8790359295936085252, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       insertIndex: -1
@@ -4120,6 +4780,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2067445506}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2067445508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2702749865481257628, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2067445506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2067445509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067445508}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236303536aa463f4ca3cf6efa297f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableLogging: 1
+  staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &2086595517
 GameObject:
   m_ObjectHideFlags: 0

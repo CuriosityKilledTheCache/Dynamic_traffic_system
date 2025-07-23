@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
+using Simulator.Manager;
 
 namespace Simulator.TrafficSignal {
     [RequireComponent(typeof(TrafficLightSetup))]
@@ -28,6 +29,8 @@ namespace Simulator.TrafficSignal {
 
         private string Name;
 
+        public float totalFuelConsumed = 0f;
+
         #region Unity Methods
         private void Awake() {
             Name = transform.name;
@@ -37,6 +40,7 @@ namespace Simulator.TrafficSignal {
             }
         }
         private void Start() {
+            totalFuelConsumed = 0f;
             StartCoroutine(Tick());
         }
         #endregion
@@ -71,6 +75,8 @@ namespace Simulator.TrafficSignal {
                     waitTimeAtIntersection = Mathf.RoundToInt(vehicleDataCalculator.TotalWaitTime - t);
                     StoreData.WriteIntesectionWaitTime(Name, vehicleDataCalculator.name, waitTimeAtIntersection);
                     TotalNumberOfVehiclesWaitingInIntersection--;
+                    totalFuelConsumed += vehicleDataCalculator.FuelUsed;
+                    GameManager.Instance.TotalFuelUsed += vehicleDataCalculator.FuelUsed;
                     break;
                 }
 

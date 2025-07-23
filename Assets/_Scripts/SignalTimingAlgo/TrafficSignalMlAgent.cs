@@ -3,6 +3,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using Simulator.Manager;
 
 namespace Simulator.SignalTiming {
     [System.Serializable]
@@ -62,7 +63,8 @@ namespace Simulator.SignalTiming {
                 "CumulativeReward",
                 "CurrentReward",
                 "CurrentPhase",
-                "GreenLightTime");
+                "GreenLightTime", 
+                "FuelConsumed");
 
             rewardLogger = new CsvLogger("reward_progress.csv",
                 "Step",
@@ -80,9 +82,9 @@ namespace Simulator.SignalTiming {
 
             episodeCounter++;
             episodeStartTime = Time.time;
+            GameManager.Instance.TotalFuelUsed = 0f;
+
         }
-
-
 
 
         /// <summary>
@@ -118,6 +120,8 @@ namespace Simulator.SignalTiming {
             AddReward(Ml_data.rewards);
             //Debug.Log($"Reward given: {Ml_data.rewards}");
             //Debug.Log(GetCumulativeReward());
+            
+            float fuel = GameManager.Instance.TotalFuelUsed;
 
             // LOG EPISODE DATA BEFORE ENDING
             if (trafficLightSetup != null) {
@@ -131,7 +135,8 @@ namespace Simulator.SignalTiming {
                         GetCumulativeReward(),
                         Ml_data.rewards,
                         trafficLightSetup.CurrentPhaseIndex,
-                        greenLightTime
+                        greenLightTime,
+                        fuel
                     );
                 }
             }

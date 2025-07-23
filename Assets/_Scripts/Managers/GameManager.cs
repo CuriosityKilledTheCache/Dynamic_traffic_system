@@ -12,6 +12,7 @@ namespace Simulator.Manager {
         public GameSettingsSO gameSettings;
         public GraphicSettingsSO graphicsSettings;
         public static GameSettingsSO GameSettings { get; private set; }
+        public float TotalFuelUsed { get; set; } = 0f;
 
         [SerializeField] private TextMeshProUGUI FpsCounterUI;
         [SerializeField] private TextMeshProUGUI GameSpeedUILabel;
