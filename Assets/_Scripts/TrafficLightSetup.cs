@@ -2,6 +2,7 @@ using Simulator.Manager;
 using Simulator.Road;
 using Simulator.ScriptableObject;
 using Simulator.SignalTiming;
+using Simulator.TrafficSignal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,7 +26,11 @@ namespace Simulator.TrafficSignal {
     }
 
 
-    [RequireComponent(typeof(RoadSetup), typeof(IntersectionDataCalculator))]
+    [RequireComponent(typeof(RoadSetup),
+                    typeof(IntersectionDataCalculator))]
+    [RequireComponent(typeof(TrafficSignalMlAgent),
+                    typeof(StaticSignalController))]
+
     public class TrafficLightSetup : MonoBehaviour {
         #region Public Fields
 
@@ -73,6 +78,24 @@ namespace Simulator.TrafficSignal {
             mlSignalTimingAlgorithm = UnityEngine.ScriptableObject.CreateInstance<MLSignalTimingOptimizationSO>();
             mlPhaseOrderAlgorithm = UnityEngine.ScriptableObject.CreateInstance<MLPhaseOptimizationSO>();
 
+            // — enable only the chosen controller:
+            var staticCtrl = GetComponent<StaticSignalController>();
+            var mlAgent   = GetComponent<TrafficSignalMlAgent>();
+            switch (signalTimingAlgorithmType)
+            {
+                case TrafficSignalAlogrithm.Static:
+                    staticCtrl.enabled = true;
+                    mlAgent.enabled    = false;
+                    break;
+                case TrafficSignalAlogrithm.SignalOptimizationML:
+                    staticCtrl.enabled = false;
+                    mlAgent.enabled    = true;
+                    break;
+                default:
+                    staticCtrl.enabled = false;
+                    mlAgent.enabled    = false;
+                    break;
+            }
 
             if (!TryGetComponent<TrafficSignalMlAgent>(out var temp)) {
                 Debug.LogError("ML Agent component not found");
