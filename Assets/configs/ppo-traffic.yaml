@@ -1,0 +1,18 @@
+behaviors:
+  TrafficSignalAgent:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 128
+      buffer_size: 2048
+      learning_rate: 3.0e-4
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 500000          # total training steps
+    time_horizon: 64          # steps per trajectory
+    summary_freq: 10000       # log scalar summaries every 10k steps

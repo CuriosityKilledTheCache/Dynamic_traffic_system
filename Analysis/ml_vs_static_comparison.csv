@@ -1,6 +1,7 @@
 Metric,ML Agent,Fixed-Time
-Average Vehicles Served,150.07,154.49
-Average Queue Length,4.28,3.90
-Max Throughput,290,305
-Min Queue Length,1,0
-Performance Improvement (%),-2.9%,Baseline (0%)
+Average Vehicles Served,254.84,96.12
+Average Queue Length,3.54,4.19
+Average Fuel Consumed (L),0.00,0.00
+Max Throughput,501,186
+Min Queue Length,1,1
+Performance Improvement (%),165.1%,Baseline (0%)
