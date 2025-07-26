@@ -1,8 +1,0 @@
-Metric,ML Agent,Static Controller
-Total Simulation Time (minutes),68.00,20.50
-Average Throughput Rate (vehicles/min),7.42,8.90
-Average Queue Growth Rate (vehicles/min),4.11,3.90
-Average Fuel Consumption Rate (L/min),0.00,0.00
-ML vs Static Throughput Improvement (%),-16.7%,0.0%
-ML vs Static Queue Reduction (%),-5.1%,0.0%
-ML vs Static Fuel Savings (%),-,-

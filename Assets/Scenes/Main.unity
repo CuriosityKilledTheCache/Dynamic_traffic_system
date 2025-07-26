@@ -339,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &140012502
 GameObject:
@@ -712,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -788,6 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &286320666
 PrefabInstance:
@@ -886,7 +888,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -951,6 +953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &352559137
 GameObject:
@@ -1286,7 +1289,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -1357,6 +1360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &499884107
 GameObject:
@@ -1541,7 +1545,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -1612,6 +1616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!114 &606841957 stripped
 MonoBehaviour:
@@ -1882,7 +1887,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -1953,6 +1958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &662643889
 PrefabInstance:
@@ -2041,7 +2047,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -2112,6 +2118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &840261852
 GameObject:
@@ -2670,7 +2677,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -2741,6 +2748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1113394053
 GameObject:
@@ -2936,7 +2944,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3007,6 +3015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1238231811
 GameObject:
@@ -3126,7 +3135,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3197,6 +3206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &1328256189
 PrefabInstance:
@@ -3285,7 +3295,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3356,6 +3366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1371684675
 GameObject:
@@ -3758,7 +3769,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3829,6 +3840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &1640249806
 PrefabInstance:
@@ -3907,7 +3919,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3953,6 +3965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1686143972
 GameObject:
@@ -4146,7 +4159,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -4217,6 +4230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!114 &1812339764 stripped
 MonoBehaviour:
@@ -4454,7 +4468,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -4525,6 +4539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &1985573341
 GameObject:
@@ -4856,7 +4871,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -4927,6 +4942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1001 &2067445506
 PrefabInstance:
@@ -5015,7 +5031,7 @@ PrefabInstance:
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: signalTimingAlgorithmType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -5086,6 +5102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableLogging: 1
+  loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
 --- !u!1 &2086595517
 GameObject:
