@@ -332,6 +332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -341,6 +346,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -355,12 +365,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -706,6 +716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -715,6 +730,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -729,12 +749,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -904,12 +924,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -955,6 +975,18 @@ MonoBehaviour:
   enableLogging: 1
   loggingInterval: 10
   staticSignalAlgorithm: {fileID: 0}
+--- !u!114 &286320671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1087317258771850082, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 286320666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286320667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5c3f03604c58343a7be0b4e0155e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &352559137
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1018,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &353401512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3727363702967003961, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 286320666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &356587899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,6 +1326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -1291,6 +1340,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -1305,12 +1359,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -1538,6 +1592,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -1547,6 +1606,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -1561,12 +1625,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -1880,6 +1944,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -1889,6 +1958,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -1903,12 +1977,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -2040,6 +2114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -2049,6 +2128,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -2063,12 +2147,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -2670,6 +2754,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -2679,6 +2768,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -2693,12 +2787,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -2937,6 +3031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -2946,6 +3045,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -2960,12 +3064,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3128,6 +3232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -3137,6 +3246,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -3151,12 +3265,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3288,6 +3402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -3297,6 +3416,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -3311,12 +3435,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -3762,6 +3886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -3771,6 +3900,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -3785,12 +3919,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -4152,6 +4286,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -4161,6 +4300,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -4175,12 +4319,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -4461,6 +4605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -4470,6 +4619,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -4484,12 +4638,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -4864,6 +5018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -4873,6 +5032,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -4887,12 +5051,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
@@ -5024,6 +5188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
+      propertyPath: TimingUI
+      value: 
+      objectReference: {fileID: 353401512}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
       propertyPath: staticSignalAlgorithm
       value: 
       objectReference: {fileID: 11400000, guid: a8dabf04ad61f05408ad5a69a0299c86,
@@ -5033,6 +5202,11 @@ PrefabInstance:
       propertyPath: signalTimingAlgorithmType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416987583964353620, guid: 77424da591e5c5646a6a1101e6c1b8c1,
+        type: 3}
+      propertyPath: <RoadSetup>k__BackingField
+      value: 
+      objectReference: {fileID: 286320671}
     - target: {fileID: 5896584559003295629, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: speedTextUI
@@ -5047,12 +5221,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c0b3621811a37f3439217b2304119ea7,
+      objectReference: {fileID: 5022602860645237092, guid: 045c5e27f1046894595faf0b9616f9d2,
         type: 3}
     - target: {fileID: 7792451276876433468, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007035633690914046, guid: 77424da591e5c5646a6a1101e6c1b8c1,
         type: 3}

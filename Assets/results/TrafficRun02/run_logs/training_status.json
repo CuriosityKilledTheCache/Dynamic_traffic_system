@@ -1,0 +1,65 @@
+{
+    "FourWaySignal": {
+        "checkpoints": [
+            {
+                "steps": 53472,
+                "file_path": "results\\TrafficRun01\\FourWaySignal\\FourWaySignal-53472.onnx",
+                "reward": null,
+                "creation_time": 1753703109.0809367,
+                "auxillary_file_paths": [
+                    "results\\TrafficRun01\\FourWaySignal\\FourWaySignal-53472.pt"
+                ]
+            },
+            {
+                "steps": 59607,
+                "file_path": "results\\TrafficRun01\\FourWaySignal\\FourWaySignal-59607.onnx",
+                "reward": 71.82860245214444,
+                "creation_time": 1753704411.5673437,
+                "auxillary_file_paths": [
+                    "results\\TrafficRun01\\FourWaySignal\\FourWaySignal-59607.pt"
+                ]
+            },
+            {
+                "steps": 80207,
+                "file_path": "results\\TrafficRun01\\FourWaySignal\\FourWaySignal-80207.onnx",
+                "reward": 75.02425348191034,
+                "creation_time": 1753708695.722528,
+                "auxillary_file_paths": [
+                    "results\\TrafficRun01\\FourWaySignal\\FourWaySignal-80207.pt"
+                ]
+            },
+            {
+                "steps": 82155,
+                "file_path": "results\\TrafficRun02\\FourWaySignal\\FourWaySignal-82155.onnx",
+                "reward": 72.07526159286499,
+                "creation_time": 1753709020.541787,
+                "auxillary_file_paths": [
+                    "results\\TrafficRun02\\FourWaySignal\\FourWaySignal-82155.pt"
+                ]
+            },
+            {
+                "steps": 96243,
+                "file_path": "results\\TrafficRun02\\FourWaySignal\\FourWaySignal-96243.onnx",
+                "reward": 71.46784490016645,
+                "creation_time": 1753711313.8319204,
+                "auxillary_file_paths": [
+                    "results\\TrafficRun02\\FourWaySignal\\FourWaySignal-96243.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 96243,
+            "file_path": "results\\TrafficRun02\\FourWaySignal.onnx",
+            "reward": 71.46784490016645,
+            "creation_time": 1753711313.8319204,
+            "auxillary_file_paths": [
+                "results\\TrafficRun02\\FourWaySignal\\FourWaySignal-96243.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.10.1+cpu"
+    }
+}

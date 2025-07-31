@@ -6,6 +6,7 @@ from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
 
+
 class TrafficSignalComparison:
     def __init__(self, data_directory="./"):
         """
@@ -64,81 +65,154 @@ class TrafficSignalComparison:
         ml_episodes = self.ml_data['episodes']
         static_episodes = self.static_data['episodes']
         
+        # REMOVED FuelConsumed from metrics
         metrics = [
             ('TotalVehicles', 'Total Vehicles'),
             ('VehiclesWaiting', 'Vehicles Waiting'),
             ('EpisodeDuration', 'Episode Duration (s)'),
-            ('FuelConsumed', 'Fuel Consumed'),
             ('CumulativeReward', 'Cumulative Reward'),
             ('GreenLightTime', 'Green Light Time (s)')
         ]
         
         for i, (metric, title) in enumerate(metrics):
-            row, col = i // 3, i % 3
-            ax = axes[row, col]
-            
-            # Check if metric exists in both datasets
-            if metric in ml_episodes.columns and metric in static_episodes.columns:
-                # Box plot comparison
-                data_to_plot = [ml_episodes[metric].dropna(), static_episodes[metric].dropna()]
-                labels = ['ML Agent', 'Static Controller']
+            if i < 5:  # Only plot the first 5 metrics since we removed one
+                row, col = i // 3, i % 3
+                ax = axes[row, col]
                 
-                bp = ax.boxplot(data_to_plot, labels=labels, patch_artist=True)
-                # bp['boxes'][0].set_facecolor('lightblue')
-                # bp['boxes'][1].set_facecolor('lightcoral')
-                bp['boxes'][0].set_facecolor('#2E86AB')  # Dark blue for ML Agent
-                bp['boxes'][1].set_facecolor('#F24236')  # Bright red for Static Controller
-
-                
-                ax.set_title(f'{title}')
-                ax.grid(True, alpha=0.3)
-                
-                # Add mean values as text
-                ml_mean = ml_episodes[metric].mean()
-                static_mean = static_episodes[metric].mean()
-                ax.text(0.02, 0.98, f'ML Mean: {ml_mean:.2f}\nStatic Mean: {static_mean:.2f}', 
-                       transform=ax.transAxes, verticalalignment='top', 
-                       bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
-            else:
-                ax.text(0.5, 0.5, f'{metric}\nNot Available', 
-                       ha='center', va='center', transform=ax.transAxes)
-                ax.set_title(f'{title} - Data Not Available')
+                # Check if metric exists in both datasets
+                if metric in ml_episodes.columns and metric in static_episodes.columns:
+                    # Box plot comparison
+                    data_to_plot = [ml_episodes[metric].dropna(), static_episodes[metric].dropna()]
+                    labels = ['ML Agent', 'Static Controller']
+                    
+                    bp = ax.boxplot(data_to_plot, labels=labels, patch_artist=True)
+                    bp['boxes'][0].set_facecolor('#2E86AB')  # Dark blue for ML Agent
+                    bp['boxes'][1].set_facecolor('#F24236')  # Bright red for Static Controller
+                    
+                    ax.set_title(f'{title}')
+                    ax.grid(True, alpha=0.3)
+                    
+                    # Add mean values as text
+                    ml_mean = ml_episodes[metric].mean()
+                    static_mean = static_episodes[metric].mean()
+                    ax.text(0.02, 0.98, f'ML Mean: {ml_mean:.2f}\nStatic Mean: {static_mean:.2f}', 
+                           transform=ax.transAxes, verticalalignment='top', 
+                           bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
+                else:
+                    ax.text(0.5, 0.5, f'{metric}\nNot Available', 
+                           ha='center', va='center', transform=ax.transAxes)
+                    ax.set_title(f'{title} - Data Not Available')
+        
+        # Hide the last subplot since we removed one metric
+        axes[1, 2].set_visible(False)
         
         plt.tight_layout()
         plt.savefig('episode_performance_comparison.png', dpi=300, bbox_inches='tight')
         plt.show()
+
+    def create_vehicles_waiting_comparison_half(self):
+        """Create a detailed comparison of vehicles waiting over time for the first half of data"""
+        fig, ax = plt.subplots(1, 1, figsize=(16, 8))  # Larger figure size
+        
+        ml_intervals = self.ml_data['intervals']
+        static_intervals = self.static_data['intervals']
+        
+        # Slice to first half of the data
+        ml_half = ml_intervals.iloc[:len(ml_intervals)//2]
+        static_half = static_intervals.iloc[:len(static_intervals)//2]
+        
+        if 'VehiclesWaiting' in ml_half.columns and 'VehiclesWaiting' in static_half.columns:
+            # Plot time series with thicker lines
+            ax.plot(ml_half['SimulationTime'], ml_half['VehiclesWaiting'], 
+                    label='ML Agent', linewidth=3, alpha=0.8, color='#2E86AB')  # Dark blue
+            ax.plot(static_half['SimulationTime'], static_half['VehiclesWaiting'], 
+                    label='Static Controller', linewidth=3, alpha=0.8, color='#F24236')  # Bright red
+            
+            ax.set_xlabel('Simulation Time (s)', fontsize=14)
+            ax.set_ylabel('Vehicles Waiting', fontsize=14)
+            ax.set_title('Vehicles Waiting Over Time (First Half): ML vs Static Controller', fontsize=16, fontweight='bold')
+            ax.legend(fontsize=12)
+            ax.grid(True, alpha=0.3)
+            
+            # Add statistics text box
+            ml_mean = ml_half['VehiclesWaiting'].mean()
+            static_mean = static_half['VehiclesWaiting'].mean()
+            improvement = ((static_mean - ml_mean) / static_mean) * 100 if static_mean != 0 else 0
+            
+            stats_text = f'ML Agent Mean: {ml_mean:.2f}\nStatic Controller Mean: {static_mean:.2f}\nImprovement: {improvement:.1f}%'
+            ax.text(0.02, 0.98, stats_text, transform=ax.transAxes, verticalalignment='top',
+                    bbox=dict(boxstyle='round', facecolor='white', alpha=0.8), fontsize=11)
+            
+            plt.tight_layout()
+            plt.savefig('vehicles_waiting_comparison_first_half.png', dpi=300, bbox_inches='tight')
+            plt.show()
+            print("✅ Vehicles waiting comparison (first half) saved as 'vehicles_waiting_comparison_first_half.png'")
+        else:
+            print("❌ VehiclesWaiting data not available in interval data")
+
+    def create_queue_length_comparison_half(self):
+        """Create a detailed comparison of queue length over time for the first half of data"""
+        fig, ax = plt.subplots(1, 1, figsize=(16, 8))  # Larger figure size
+        
+        ml_intervals = self.ml_data['intervals']
+        static_intervals = self.static_data['intervals']
+        
+        # Slice to first half of the data
+        ml_half = ml_intervals.iloc[:len(ml_intervals)//2]
+        static_half = static_intervals.iloc[:len(static_intervals)//2]
+        
+        if 'QueueLength' in ml_half.columns and 'QueueLength' in static_half.columns:
+            # Plot time series with thicker lines
+            ax.plot(ml_half['SimulationTime'], ml_half['QueueLength'], 
+                    label='ML Agent', linewidth=3, alpha=0.8, color='#2E86AB')  # Dark blue
+            ax.plot(static_half['SimulationTime'], static_half['QueueLength'], 
+                    label='Static Controller', linewidth=3, alpha=0.8, color='#F24236')  # Bright red
+            
+            ax.set_xlabel('Simulation Time (s)', fontsize=14)
+            ax.set_ylabel('Queue Length', fontsize=14)
+            ax.set_title('Queue Length Over Time (First Half): ML vs Static Controller', fontsize=16, fontweight='bold')
+            ax.legend(fontsize=12)
+            ax.grid(True, alpha=0.3)
+            
+            # Add statistics text box
+            ml_mean = ml_half['QueueLength'].mean()
+            static_mean = static_half['QueueLength'].mean()
+            improvement = ((static_mean - ml_mean) / static_mean) * 100 if static_mean != 0 else 0
+            
+            stats_text = f'ML Agent Mean: {ml_mean:.2f}\nStatic Controller Mean: {static_mean:.2f}\nImprovement: {improvement:.1f}%'
+            ax.text(0.02, 0.98, stats_text, transform=ax.transAxes, verticalalignment='top',
+                    bbox=dict(boxstyle='round', facecolor='white', alpha=0.8), fontsize=11)
+            
+            plt.tight_layout()
+            plt.savefig('queue_length_comparison_first_half.png', dpi=300, bbox_inches='tight')
+            plt.show()
+            print("✅ Queue length comparison (first half) saved as 'queue_length_comparison_first_half.png'")
+        else:
+            print("❌ QueueLength data not available in interval data")
         
     def compare_interval_data(self):
         """Compare interval-based performance over time"""
-        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+        fig, axes = plt.subplots(1, 3, figsize=(24, 8))  # Changed to 1x3 since we removed fuel
         fig.suptitle('Interval Data Comparison: ML vs Static Over Time', fontsize=16, fontweight='bold')
         
         ml_intervals = self.ml_data['intervals']
         static_intervals = self.static_data['intervals']
         
-        # Metrics to compare over time
+        # REMOVED FuelConsumed from time_metrics
         time_metrics = [
             ('TotalVehicles', 'Total Vehicles Over Time'),
             ('VehiclesWaiting', 'Vehicles Waiting Over Time'),
-            ('FuelConsumed', 'Fuel Consumption Over Time'),
             ('QueueLength', 'Queue Length Over Time')
         ]
         
         for i, (metric, title) in enumerate(time_metrics):
-            row, col = i // 2, i % 2
-            ax = axes[row, col]
+            ax = axes[i]
             
             if metric in ml_intervals.columns and metric in static_intervals.columns:
-                # Plot time series
-                # ax.plot(ml_intervals['SimulationTime'], ml_intervals[metric], 
-                #        label='ML Agent', linewidth=2, alpha=0.8)
-                # ax.plot(static_intervals['SimulationTime'], static_intervals[metric], 
-                #        label='Static Controller', linewidth=2, alpha=0.8)
                 ax.plot(ml_intervals['SimulationTime'], ml_intervals[metric], 
                         label='ML Agent', linewidth=2, alpha=0.8, color='#2E86AB')  # Dark blue
                 ax.plot(static_intervals['SimulationTime'], static_intervals[metric], 
                         label='Static Controller', linewidth=2, alpha=0.8, color='#F24236')  # Bright red
-
                 
                 ax.set_xlabel('Simulation Time (s)')
                 ax.set_ylabel(metric)
@@ -163,8 +237,8 @@ class TrafficSignalComparison:
         ml_episodes = self.ml_data['episodes']
         static_episodes = self.static_data['episodes']
         
-        # Compare key metrics
-        comparison_metrics = ['TotalVehicles', 'VehiclesWaiting', 'FuelConsumed', 'EpisodeDuration']
+        # Compare key metrics - REMOVED EpisodeDuration and FuelConsumed as requested
+        comparison_metrics = ['TotalVehicles', 'VehiclesWaiting']
         
         results = []
         
@@ -193,6 +267,10 @@ class TrafficSignalComparison:
                 # Calculate improvement percentage
                 improvement = ((static_stats['mean'] - ml_stats['mean']) / static_stats['mean']) * 100
                 
+                # MODIFICATION: Multiply TotalVehicles improvement by -1
+                if metric == 'TotalVehicles':
+                    improvement = improvement * -1
+                
                 results.append({
                     'Metric': metric,
                     'ML_Mean': ml_stats['mean'],
@@ -219,7 +297,7 @@ class TrafficSignalComparison:
         print(f"\n📊 Summary saved to 'performance_comparison_summary.csv'")
         
         return summary_df
-        
+    
     def generate_performance_report(self):
         """Generate a comprehensive performance report"""
         print("\n" + "="*70)
@@ -229,8 +307,8 @@ class TrafficSignalComparison:
         ml_episodes = self.ml_data['episodes']
         static_episodes = self.static_data['episodes']
         
-        # Overall performance metrics
-        metrics_to_analyze = ['TotalVehicles', 'VehiclesWaiting', 'FuelConsumed', 'EpisodeDuration']
+        # Overall performance metrics - REMOVED EpisodeDuration and FuelConsumed as requested
+        metrics_to_analyze = ['TotalVehicles', 'VehiclesWaiting']
         
         ml_better_count = 0
         static_better_count = 0
@@ -271,11 +349,11 @@ class TrafficSignalComparison:
                 print(f"  Reward trend: {'Improving' if trend > 0 else 'Declining'} ({trend:.4f}/episode)")
                 print(f"  Final reward: {rewards.iloc[-1]:.2f}")
                 print(f"  Best reward: {rewards.max():.2f}")
-    
+
     def create_dashboard(self):
         """Create a comprehensive dashboard with all comparisons"""
-        fig = plt.figure(figsize=(20, 16))
-        gs = fig.add_gridspec(4, 4, hspace=0.3, wspace=0.3)
+        fig = plt.figure(figsize=(20, 12))  # Reduced height since we removed one section
+        gs = fig.add_gridspec(3, 4, hspace=0.3, wspace=0.3)  # Changed to 3 rows instead of 4
         
         # Title
         fig.suptitle('Traffic Signal Control: ML vs Static Performance Dashboard', 
@@ -295,8 +373,6 @@ class TrafficSignalComparison:
         ml_means = [ml_episodes[m].mean() if m in ml_episodes.columns else 0 for m in metrics]
         static_means = [static_episodes[m].mean() if m in static_episodes.columns else 0 for m in metrics]
         
-        # ax1.bar(x - width/2, ml_means, width, label='ML Agent', alpha=0.8)
-        # ax1.bar(x + width/2, static_means, width, label='Static Controller', alpha=0.8)
         ax1.bar(x - width/2, ml_means, width, label='ML Agent', alpha=0.8, color='#2E86AB')
         ax1.bar(x + width/2, static_means, width, label='Static Controller', alpha=0.8, color='#F24236')
         ax1.set_xlabel('Metrics')
@@ -307,31 +383,23 @@ class TrafficSignalComparison:
         ax1.legend()
         ax1.grid(True, alpha=0.3)
         
-        # 2. Fuel consumption over time
+        # 2. Total Vehicles over time
         ax2 = fig.add_subplot(gs[0, 2:])
-        if 'FuelConsumed' in ml_intervals.columns:
-            # ax2.plot(ml_intervals['SimulationTime'], ml_intervals['FuelConsumed'], 
-            #         label='ML Agent', linewidth=2)
-            # ax2.plot(static_intervals['SimulationTime'], static_intervals['FuelConsumed'], 
-            #         label='Static Controller', linewidth=2)
-            ax2.plot(ml_intervals['SimulationTime'], ml_intervals['FuelConsumed'], 
+        if 'TotalVehicles' in ml_intervals.columns:
+            ax2.plot(ml_intervals['SimulationTime'], ml_intervals['TotalVehicles'], 
                     label='ML Agent', linewidth=2, color='#2E86AB')
-            ax2.plot(static_intervals['SimulationTime'], static_intervals['FuelConsumed'], 
+            ax2.plot(static_intervals['SimulationTime'], static_intervals['TotalVehicles'], 
                     label='Static Controller', linewidth=2, color='#F24236')
 
             ax2.set_xlabel('Simulation Time (s)')
-            ax2.set_ylabel('Fuel Consumed')
-            ax2.set_title('Fuel Consumption Over Time')
+            ax2.set_ylabel('Total Vehicles')
+            ax2.set_title('Total Vehicles Over Time')
             ax2.legend()
             ax2.grid(True, alpha=0.3)
         
         # 3. Queue length comparison
-        ax3 = fig.add_subplot(gs[1, :2])
+        ax3 = fig.add_subplot(gs[1, :])  # Made this span the full width since we removed the reward plot
         if 'QueueLength' in ml_intervals.columns:
-            # ax3.plot(ml_intervals['SimulationTime'], ml_intervals['QueueLength'], 
-            #         label='ML Agent', linewidth=2, alpha=0.8)
-            # ax3.plot(static_intervals['SimulationTime'], static_intervals['QueueLength'], 
-            #         label='Static Controller', linewidth=2, alpha=0.8)
             ax3.plot(ml_intervals['SimulationTime'], ml_intervals['QueueLength'], 
                     label='ML Agent', linewidth=2, alpha=0.8, color='#2E86AB')
             ax3.plot(static_intervals['SimulationTime'], static_intervals['QueueLength'], 
@@ -342,31 +410,22 @@ class TrafficSignalComparison:
             ax3.legend()
             ax3.grid(True, alpha=0.3)
         
-        # 4. Reward progression (ML only)
-        ax4 = fig.add_subplot(gs[1, 2:])
-        if 'CumulativeReward' in self.ml_data['rewards'].columns:
-            rewards_df = self.ml_data['rewards']
-            ax4.plot(rewards_df['Step'], rewards_df['CumulativeReward'], 
-                    linewidth=2, color='blue')
-            ax4.set_xlabel('Training Steps')
-            ax4.set_ylabel('Cumulative Reward')
-            ax4.set_title('ML Agent Learning Curve')
-            ax4.grid(True, alpha=0.3)
+        # REMOVED: Reward progression section (Section 4 was deleted)
         
-        # 5. Performance metrics heatmap
-        ax5 = fig.add_subplot(gs[2:, :])
-        
-        # Create performance comparison matrix
+        # 4. Performance metrics heatmap (moved up from section 5)
+        ax4 = fig.add_subplot(gs[2, :])
+
+        # Create performance comparison matrix - REMOVED EpisodeDuration and FuelConsumed
         comparison_data = []
-        metrics = ['TotalVehicles', 'VehiclesWaiting', 'FuelConsumed', 'EpisodeDuration']
-        
+        metrics = ['TotalVehicles', 'VehiclesWaiting']  # Removed EpisodeDuration and FuelConsumed
+
         for metric in metrics:
             if metric in ml_episodes.columns and metric in static_episodes.columns:
                 ml_val = ml_episodes[metric].mean()
                 static_val = static_episodes[metric].mean()
                 # Normalize values for better visualization
                 comparison_data.append([ml_val, static_val])
-        
+
         if comparison_data:
             comparison_array = np.array(comparison_data)
             # Normalize each row
@@ -376,12 +435,12 @@ class TrafficSignalComparison:
                     comparison_array[i] = comparison_array[i] / max_val
             
             sns.heatmap(comparison_array, 
-                       xticklabels=['ML Agent', 'Static Controller'],
-                       yticklabels=[m for m in metrics if m in ml_episodes.columns and m in static_episodes.columns],
-                       annot=True, fmt='.3f', cmap='RdYlBu_r',
-                       ax=ax5)
-            ax5.set_title('Normalized Performance Heatmap')
-        
+                    xticklabels=['ML Agent', 'Static Controller'],
+                    yticklabels=[m for m in metrics if m in ml_episodes.columns and m in static_episodes.columns],
+                    annot=True, fmt='.3f', cmap='RdYlBu_r',
+                    ax=ax4)
+            ax4.set_title('Normalized Performance Heatmap')
+            
         plt.savefig('traffic_signal_dashboard.png', dpi=300, bbox_inches='tight')
         plt.show()
     
@@ -399,6 +458,13 @@ class TrafficSignalComparison:
         print("\n📈 Generating interval data comparison...")
         self.compare_interval_data()
         
+        # NEW: Generate first half data comparisons
+        print("\n🚗 Generating detailed vehicles waiting comparison (first half)...")
+        self.create_vehicles_waiting_comparison_half()
+        
+        print("\n🚦 Generating detailed queue length comparison (first half)...")
+        self.create_queue_length_comparison_half()
+        
         print("\n🔍 Performing statistical analysis...")
         summary_df = self.statistical_comparison()
         
@@ -411,6 +477,7 @@ class TrafficSignalComparison:
         print("\n✅ Analysis complete! Check the generated PNG files and CSV summary.")
         
         return summary_df
+
 
 # Usage example
 if __name__ == "__main__":
